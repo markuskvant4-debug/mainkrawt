@@ -1,7 +1,4 @@
-FROM alpine:latest
-
-# Устанавливаем Java 8, Питон для заглушки и утилиты
-RUN apk update && apk add --no-cache openjdk8-jre-headless curl bash python3
+FROM eclipse-temurin:8-jre-alpine
 
 WORKDIR /minecraft
 COPY . .
